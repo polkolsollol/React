@@ -26,15 +26,15 @@
 //             category="słodycze" 
 //             image="./img/1png" />
 
-function ProductCard({name, price, category, image}){
+function ProductCard({name, price, category, image, onAdd}){
     return(
-        <div>
-            <img src={image} alt={name}/>
-            <h2>{name}</h2>
+        <article className="product-card">
+            {image && <img src={image} alt={name}/>}
+            <h3>{name}</h3>
             <p>kategoria: {category}</p>
             <p>cena: {price} zł</p>
-            <button>Dodaj do koszyka</button>
-        </div>
+            <button onClick={onAdd}>Dodaj do koszyka</button>
+        </article>
     );
 }
 

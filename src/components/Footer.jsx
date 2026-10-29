@@ -1,8 +1,13 @@
 function Footer() {
   return (
-    <footer>
+    <footer className="footer">
       <p>© 2026 Sklep internetowy</p>
-      <p>Kontakt: sklep@radzymin.pl</p>
+      <p>
+        Kontakt:{" "}
+        <a href="mailto:sklep@radzymin.pl">
+          sklep@radzymin.pl
+        </a>
+      </p>
     </footer>
   );
 }

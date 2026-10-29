@@ -40,4 +40,10 @@ function getProductsCount(){
     return products.length;
 }
 
-export {getProducts, getProductById, getProductByCategory, getProductSortedByPrice, getProductSortedByPriceDesc, getProductsUnderPrice, getProductsOverPrice, getProductByName, getProductExactPrice, getProductsCount};
+function searchProducts(query){
+    return products.filter(product => 
+        product.name.toLowerCase().includes(query.toLowerCase())
+    );
+}
+
+export {getProducts, getProductById, getProductByCategory, getProductSortedByPrice, getProductSortedByPriceDesc, getProductsUnderPrice, getProductsOverPrice, getProductByName, getProductExactPrice, getProductsCount, searchProducts};
